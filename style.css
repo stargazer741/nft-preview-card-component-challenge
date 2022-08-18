@@ -31,7 +31,9 @@ body {
   background-color: var(--very-dark-blue-card-bg);
   padding: 25px;
   border-radius: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 60px;
+  box-shadow: 15px 30px 5px rgba(12, 23, 41, 1),
+              -15px 30px 5px rgba(12, 23, 41, 1);
 }
 
 .nft-img-container {
