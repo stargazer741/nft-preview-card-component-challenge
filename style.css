@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+
+  background-color: var(--very-dark-blue-main-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--very-dark-blue-card-bg);
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.nft-img-container {
+  position: relative;
+}
+
+.nft-img-container:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.nft-img-container:hover .icon {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.nft-img-container .nft-img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  width: 300px;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: var(--cyan);
+  border-radius: 10px;
+}
+
+.icon {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease;
+  z-index: 3;
+}
+
+.text-container {
+  max-width: 300px;
+}
+
+.text-container .heading {
+  color: var(--white);
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+}
+
+.text-container .heading:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.text-container .description {
+  color: var(--soft-blue);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.price-and-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-and-time .price {
+  position: relative;
+  color: var(--cyan);
+}
+
+.price-and-time .eth-icon {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 8px;
+}
+
+.price-and-time .time {
+  color: var(--soft-blue);
+}
+
+.price-and-time .clock-icon {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 8px;
+}
+
+.horizontal-rule {
+  height: 2px;
+  border-width: 0;
+  background-color: var(--very-dark-blue-line);
+}
+
+.creator {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 15px;
+  margin-bottom: -8px;
+}
+
+.creator .creator-img {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--white);
+  border-radius: 100%;
+}
+
+.creator p {
+  color: var(--soft-blue);
+}
+
+.creator span {
+  color: var(--white);
+}
+
+.creator span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  color: greenyellow;
+}
+
+.attribution a {
+  color: hsl(220, 2%, 75%);
+}
