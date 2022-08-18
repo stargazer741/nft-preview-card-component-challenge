@@ -87,6 +87,7 @@ body {
 .text-container .heading {
   color: var(--white);
   font-family: "Outfit", sans-serif;
+  font-size:x-large;
   font-weight: 600;
 }
 
